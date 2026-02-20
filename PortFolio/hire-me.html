@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Hire Me - Muhammad Abdullah Malik</title>
+  <meta name="description" content="Hire Muhammad Abdullah Malik for your next web development project. Full Stack Developer available for custom solutions.">
+  <meta name="keywords" content="Hire, Full Stack Developer, Web Development, Freelancer">
+
+  <!-- Favicons -->
+  <link href="assets/img/MALOGO.png" rel="icon">
+  <link href="assets/img/MALOGO.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    /* Hire Me Page Styles */
+    html, body {
+      height: 100%;
+    }
+
+    body.hire-page {
+      background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .hire-main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+      margin-top: 80px;
+    }
+
+    .hire-container {
+      width: 100%;
+      max-width: 650px;
+      animation: fadeInUp 0.6s ease-out;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hire-form-card {
+      background: #1c1c1c;
+      border: 1px solid #2a2a2a;
+      border-radius: 20px;
+      padding: 50px 40px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+      transition: all 0.3s ease;
+    }
+
+    .hire-form-card:hover {
+      border-color: #ff4d4f;
+      box-shadow: 0 20px 80px rgba(255, 77, 79, 0.15);
+    }
+
+    .hire-form-title {
+      text-align: center;
+      margin-bottom: 10px;
+      color: #ffffff;
+      font-size: 32px;
+      font-weight: 700;
+    }
+
+    .hire-form-subtitle {
+      text-align: center;
+      color: #b0b0b0;
+      margin-bottom: 35px;
+      font-size: 16px;
+    }
+
+    .form-label {
+      color: #a0a0a0;
+      font-weight: 600;
+      font-size: 14px;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .form-control,
+    .form-select {
+      background: #252525;
+      border: 2px solid #333333;
+      color: #ffffff;
+      padding: 12px 16px;
+      border-radius: 8px;
+      font-size: 15px;
+      transition: all 0.3s ease;
+    }
+
+    .form-control::placeholder {
+      color: #666666;
+    }
+
+    .form-control:focus,
+    .form-select:focus {
+      background: #2a2a2a;
+      border-color: #ff4d4f;
+      box-shadow: 0 0 0 0.2rem rgba(255, 77, 79, 0.25);
+      color: #ffffff;
+    }
+
+    .form-select option {
+      background: #1c1c1c;
+      color: #ffffff;
+    }
+
+    .form-group {
+      margin-bottom: 24px;
+    }
+
+    .form-group.has-error .form-control,
+    .form-group.has-error .form-select {
+      border-color: #df1529;
+      background: rgba(223, 21, 41, 0.05);
+    }
+
+    .error-message {
+      color: #df1529;
+      font-size: 13px;
+      margin-top: 6px;
+      display: none;
+      font-weight: 500;
+    }
+
+    .error-message.show {
+      display: block;
+    }
+
+    textarea.form-control {
+      resize: vertical;
+      min-height: 120px;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .btn-hire {
+      background: #ff4d4f;
+      color: #ffffff;
+      border: none;
+      padding: 14px 32px;
+      font-weight: 700;
+      font-size: 16px;
+      border-radius: 8px;
+      width: 100%;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-hire:hover:not(:disabled) {
+      background: #ff3d3f;
+      transform: scale(1.03);
+      box-shadow: 0 12px 36px rgba(255, 77, 79, 0.35);
+    }
+
+    .btn-hire:disabled {
+      opacity: 0.8;
+      cursor: not-allowed;
+    }
+
+    .spinner-border-sm {
+      width: 16px;
+      height: 16px;
+      border-width: 2px;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .hire-main {
+        margin-top: 60px;
+        padding: 30px 15px;
+      }
+
+      .hire-form-card {
+        padding: 30px 20px;
+        border-radius: 16px;
+      }
+
+      .hire-form-title {
+        font-size: 26px;
+        margin-bottom: 8px;
+      }
+
+      .hire-form-subtitle {
+        font-size: 14px;
+        margin-bottom: 25px;
+      }
+
+      .form-label {
+        font-size: 12px;
+      }
+
+      .form-control,
+      .form-select {
+        padding: 10px 12px;
+        font-size: 14px;
+      }
+
+      .form-group {
+        margin-bottom: 18px;
+      }
+
+      .two-col {
+        grid-template-columns: 1fr;
+        gap: 15px;
+      }
+
+      textarea.form-control {
+        min-height: 100px;
+      }
+
+      .btn-hire {
+        padding: 12px 24px;
+        font-size: 15px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .hire-main {
+        margin-top: 50px;
+        padding: 20px 10px;
+      }
+
+      .hire-form-card {
+        padding: 25px 15px;
+        border-radius: 12px;
+      }
+
+      .hire-form-title {
+        font-size: 22px;
+      }
+
+      .hire-form-subtitle {
+        font-size: 13px;
+      }
+
+      .form-control,
+      .form-select {
+        padding: 9px 10px;
+        font-size: 13px;
+      }
+
+      .btn-hire {
+        padding: 11px 20px;
+        font-size: 14px;
+      }
+
+      textarea.form-control {
+        min-height: 80px;
+      }
+
+      .two-col {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Footer */
+    .hire-footer {
+      background: rgba(20, 20, 20, 0.8);
+      border-top: 1px solid #2a2a2a;
+      padding: 30px 20px;
+      text-align: center;
+      color: #b0b0b0;
+      font-size: 14px;
+      margin-top: auto;
+    }
+
+    .hire-footer a {
+      color: #ff4d4f;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .hire-footer a:hover {
+      color: #ff3d3f;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 576px) {
+      .hire-footer {
+        padding: 20px 15px;
+        font-size: 12px;
+      }
+    }
+  </style>
+</head>
+
+<body class="hire-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <h1 class="sitename">&lt;MA/&gt;</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="my-journey.html">My Journey</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-hire-header" href="hire-me.html">Hire Me</a>
+
+    </div>
+  </header>
+
+  <main class="hire-main">
+    <div class="hire-container">
+      <div class="hire-form-card">
+        <h1 class="hire-form-title">Let's Work Together</h1>
+        <p class="hire-form-subtitle">Tell me about your project and let's create something amazing</p>
+
+        <form id="hireForm">
+          <div class="two-col">
+            <div class="form-group">
+              <label for="fullName" class="form-label">Full Name <span style="color: #ff4d4f;">*</span></label>
+              <input type="text" class="form-control" id="fullName" name="fullName" placeholder="Your name" required>
+              <div class="error-message" id="fullName-error">Full name is required</div>
+            </div>
+
+            <div class="form-group">
+              <label for="company" class="form-label">Company Name</label>
+              <input type="text" class="form-control" id="company" name="company" placeholder="Your company (optional)">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email" class="form-label">Email Address <span style="color: #ff4d4f;">*</span></label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="your.email@example.com" required>
+            <div class="error-message" id="email-error">Please enter a valid email address</div>
+          </div>
+
+          <div class="two-col">
+            <div class="form-group">
+              <label for="budget" class="form-label">Budget Range</label>
+              <select class="form-select" id="budget" name="budget">
+                <option value="">Select budget</option>
+                <option value="100-500">$100 - $500</option>
+                <option value="500-1000">$500 - $1,000</option>
+                <option value="1000-5000">$1,000 - $5,000</option>
+                <option value="5000+">$5,000+</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="projectType" class="form-label">Project Type</label>
+              <select class="form-select" id="projectType" name="projectType">
+                <option value="">Select type</option>
+                <option value="website">Website</option>
+                <option value="webapp">Web App</option>
+                <option value="ecommerce">E-commerce</option>
+                <option value="saas">SaaS</option>
+                <option value="custom">Custom Solution</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="timeline" class="form-label">Timeline</label>
+            <select class="form-select" id="timeline" name="timeline">
+              <option value="">Select timeline</option>
+              <option value="urgent">Urgent (1-2 weeks)</option>
+              <option value="1month">1 Month</option>
+              <option value="2-3months">2-3 Months</option>
+              <option value="flexible">Flexible</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="description" class="form-label">Project Description <span style="color: #ff4d4f;">*</span></label>
+            <textarea class="form-control" id="description" name="description" placeholder="Tell me more about your project, goals, and requirements..." required></textarea>
+            <div class="error-message" id="description-error">Project description is required (min 10 characters)</div>
+          </div>
+
+          <button type="submit" class="btn-hire" id="submitBtn">
+            <span id="btnText">Send Inquiry</span>
+            <span id="spinner" style="display: none;">
+              <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+            </span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer id="footer" class="footer">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-5 col-md-12 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">&lt;MA/&gt;</span>
+          </a>
+          <p>Full Stack Developer passionate about building scalable, dynamic, and user-friendly web applications with modern technologies.</p>
+          <div class="social-links d-flex mt-4">
+            <a href="https://github.com/abdullah-workspace" target="_blank"><i class="bi bi-github"></i></a>
+            <a href="https://www.linkedin.com/in/mabdullahcodes" target="_blank"><i class="bi bi-linkedin"></i></a>
+            <a href="mailto:malikabdullahh052@gmail.com"><i class="bi bi-envelope"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="my-journey.html">My Journey</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Tech Stack</h4>
+          <ul>
+            <li><a href="#">React</a></li>
+            <li><a href="#">Node.js</a></li>
+            <li><a href="#">MongoDB</a></li>
+            <li><a href="#">PostgreSQL</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+          <h4>Get In Touch</h4>
+          <p>Islamabad, Pakistan</p>
+          <p class="mt-4"><strong>Email:</strong> <span>malikabdullahh052@gmail.com</span></p>
+          <p><strong>Phone:</strong> <span>+92 330 4147890</span></p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">2026 Muhammad Abdullah</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        Crafted with <i class="bi bi-heart-fill" style="color: #ff4d4f;"></i> | Designed for portfolio excellence
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- Success Modal -->
+  <div class="modal fade" id="hireSuccessModal" tabindex="-1" aria-labelledby="hireSuccessModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="hireSuccessModalLabel">Inquiry Sent</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body d-flex align-items-start gap-3">
+          <i class="bi bi-check-circle-fill" style="font-size:28px;color:#ff4d4f;margin-top:4px"></i>
+          <div>
+            <h5 class="mb-1" style="color: #ffffff;">Thank You!</h5>
+            <p class="mb-0" style="color: #b0b0b0;">I've received your inquiry and will get back to you within 24 hours. Looking forward to working with you!</p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-accent" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hire Form Validation Script -->
+  <script>
+    (function() {
+      const form = document.getElementById('hireForm');
+      const submitBtn = document.getElementById('submitBtn');
+      const btnText = document.getElementById('btnText');
+      const spinner = document.getElementById('spinner');
+
+      // Email validation regex
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      // Clear error on focus
+      document.querySelectorAll('.form-control, .form-select').forEach(field => {
+        field.addEventListener('focus', function() {
+          const formGroup = this.closest('.form-group');
+          formGroup.classList.remove('has-error');
+          const errorMsg = formGroup.querySelector('.error-message');
+          if (errorMsg) errorMsg.classList.remove('show');
+        });
+      });
+
+      // Form submit handler
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        // Get form fields
+        const fullName = document.getElementById('fullName').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const description = document.getElementById('description').value.trim();
+
+        // Reset error states
+        document.querySelectorAll('.form-group').forEach(group => {
+          group.classList.remove('has-error');
+          const errorMsg = group.querySelector('.error-message');
+          if (errorMsg) errorMsg.classList.remove('show');
+        });
+
+        let isValid = true;
+
+        // Validate Full Name
+        if (!fullName) {
+          showError('fullName', 'Full name is required');
+          isValid = false;
+        }
+
+        // Validate Email
+        if (!email) {
+          showError('email', 'Email address is required');
+          isValid = false;
+        } else if (!emailRegex.test(email)) {
+          showError('email', 'Please enter a valid email address');
+          isValid = false;
+        }
+
+        // Validate Description
+        if (!description || description.length < 10) {
+          showError('description', 'Project description is required (min 10 characters)');
+          isValid = false;
+        }
+
+        if (!isValid) return;
+
+        // Disable form and show spinner
+        submitBtn.disabled = true;
+        btnText.style.display = 'none';
+        spinner.style.display = 'inline-block';
+
+        // Simulate API call
+        setTimeout(() => {
+          // Re-enable form
+          submitBtn.disabled = false;
+          btnText.style.display = 'inline';
+          spinner.style.display = 'none';
+
+          // Show success modal
+          const modal = new bootstrap.Modal(document.getElementById('hireSuccessModal'));
+          modal.show();
+
+          // Reset form
+          form.reset();
+        }, 2000);
+      });
+
+      function showError(fieldId, message) {
+        const field = document.getElementById(fieldId);
+        const formGroup = field.closest('.form-group');
+        formGroup.classList.add('has-error');
+        const errorMsg = formGroup.querySelector('.error-message');
+        if (errorMsg) {
+          errorMsg.textContent = message;
+          errorMsg.classList.add('show');
+        }
+      }
+    })();
+  </script>
+
+</body>
+
+</html>
